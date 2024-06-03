@@ -9,7 +9,8 @@ class Prakerja extends Model
 {
     use HasFactory;
 
-    protected  $table = 'prakerja';
+    //harus sama dengan nama tabel 
+    protected  $table = 'prakerjas';
 
     protected $fillable = ['nama', 'email', 'telepon', 'alamat', 'pendidikan_terakhir', 'foto_user',
 

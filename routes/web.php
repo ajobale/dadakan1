@@ -2,11 +2,19 @@
 
 use App\Models\Prakerja;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrakerjaController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DestinasiController;
+
 
 Route::get('/', function () {
-    return view('prakerja/template');
+    return view('home/home');
 });
 
 
-Route::get('/prakerja', [PrakerjaController::class, 'index'])->name('/home');
+Route::get('/login', [AuthController::class, 'index'])->name('/login');
+Route::get('register', [AuthController::class, 'register'])->name('/register');
+
+
+
+
+Route::get('/destinasi', [DestinasiController::class, 'index'])->name('/destinasi');
