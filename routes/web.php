@@ -2,11 +2,12 @@
 
 use App\Models\Prakerja;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrakerjaController;
+use App\Http\Controllers\DestinasiController;
 
 Route::get('/', function () {
-    return view('prakerja/template');
+    return view('home/home');
 });
 
 
-Route::get('/prakerja', [PrakerjaController::class, 'index'])->name('/home');
+
+Route::get('/destinasi', [DestinasiController::class, 'index'])->name('/destinasi');
